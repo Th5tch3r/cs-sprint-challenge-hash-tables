@@ -3,6 +3,19 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    ht = {}
+    result = []
+    max_val = 0
+    for arr in arrays:
+        for n in arr:
+            if n not in ht:
+                ht[n] = 0
+            ht[n] = ht[n] + 1
+            if ht[n] > max_val:
+                max_val = ht[n]
+    for n in ht:
+        if ht[n] == max_val:
+            result.append(n)
 
     return result
 

@@ -23,11 +23,22 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+- Function that returns a hashed number value as a key for the data to be stored in the hash table. Some key requirements are consistent returned value for every key hashed, different inputs return different values, number returned from hash functions must at a certain range (12 digits). Hash numbers are random to prevent collisions with inputed data.
+
 2. Collision resolution
+- A solution to prevent inputed data in the hash tables from colliding (getting same index). Frequent of collisions will cause hash table to iterate through an index, which could increase search time. The resolution is using a load factor, which sums up all of the occupied slots and divides it with total slots. If the sum is 0.7s, then the hash table must double in size => space out each stored value (less linked list traversal). 
+
 3. Performance of basic hash table operations
+- Search, add, edit, delete are all O(1) (constant time).
+
 4. Load factor
+- It's the result of occupied slots/total slots/ 0.7 warrants a doubling in hash table size. 0.2 halves the size of the table
+
 5. Automatic resizing
+- Hash table calculates load factor after adds or deletes and then resizes accordingly. 
+
 6. Various use cases for hash tables
+- Constant time retrieval of item is useful for counting words, caching data, any kind of records that uses a key value pair, duplicate prevention (all keys are unique and cannot be aggerated when inputted again).
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
